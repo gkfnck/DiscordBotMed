@@ -2,6 +2,7 @@
 import discord
 import random
 import asyncio
+import os
 
 
 class chatbot(discord.Client):
@@ -79,4 +80,5 @@ if __name__ == "__main__":
     # 객체를 생성
     client = chatbot()
     # TOKEN 값을 통해 로그인하고 봇을 실행
-    client.run("OTA1MDMyNDI1NTI3MTg1NDMx.YYELIA.8ZsN0nVmtD0r10Hish59R3-ATwY")
+    access_token = os.environ["BOT_TOKEN"]
+    client.run(access_token)
